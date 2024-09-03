@@ -16,11 +16,13 @@
 <div align="center">
   <p>The color palette to be used for the page would be the following:</p>
   <div align="center">
-    <p>#619CDB sky blue</p>
-    <p>#B9C6D5 light gray</p>
-    <p>#254466 opaque dark blue</p>
-    <p>#ffffff pure white</p>
-    <p>#000009 opaque black</p>
+    <ul>
+      <li>#619CDB sky blue</li>
+      <li>#B9C6D5 light gray</li>
+      <li>#254466 opaque dark blue</li>
+      <li>#ffffff pure white</li>
+      <li>#000009 opaque black</li>
+    </ul>
   </div>
   <p>I will use the font for the texts soto-serif that was found on Google <a href="https://fonts.google.com/noto/specimen/Noto+Serif?query=noto">Font</a></p>
 </div>
