@@ -13,14 +13,16 @@
     <img src= "https://i.ibb.co/pKKrwn3/javascript-js-icon-2048x2048-nyxvtvk0.png" width = 150 height = 150>
   </div>
 </div>
-<div align="Justify">
+<div align="center">
   <p>The color palette to be used for the page would be the following:</p>
   <div align="center">
-    <img src="https://convertingcolors.com/color-palette-image/view/224466183F660E3A66033566003366.png" width= 250 height= 250>
-    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQNeWouG2u45dfdoNoH2dDfLJ_H27Pxxxi59w&s" width= 250 height= 250> 
-    <img src="" width= height=> 
-    <img src="" width= height=> 
+    <p>#619CDB sky blue</p>
+    <p>#B9C6D5 light gray</p>
+    <p>#254466 opaque dark blue</p>
+    <p>#ffffff pure white</p>
+    <p>#000009 opaque black</p>
   </div>
+  <p>I will use the font for the texts soto-serif that was found on Google <a href="https://fonts.google.com/noto/specimen/Noto+Serif?query=noto">Font</a></p>
 </div>
 <div align = "center">
   <p>Let's see how it turns out if I don't give up on the attempt jejje</p>
