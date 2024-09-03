@@ -6,7 +6,7 @@
 body{
     width: 100%;
     height: 100vh;
-    background: linear-gradient(to right, #000009, #B9C6D5);
+    background: linear-gradient(to left, #000009, #B9C6D5);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -15,5 +15,28 @@ header{
     width: 95%;
     height: 80%;
     border: 1px solid #fdfdfd;
-    border-radius: 40px;
+    border-radius: 10px;
+    display: flex;
+    flex-wrap: wrap;
+
+}
+header .menu--panel,.song--panel{
+    position: relative;
+    width: 25%;
+    height: 90%;
+    border-radius: 10px;
+    background-color: #254466;
+    opacity: 0.2;
+    box-shadow: 2px 1px 15px #000009;
+    color: #254466;
+}
+header .song--panel{
+    width: 75%;
+    background-color: #619CDB;
+    opacity: 0.3;
+}
+header .Play--music{
+    width: 100%;
+    height: 10%;
+    background-color: #000009;
 }
