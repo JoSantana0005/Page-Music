@@ -1,0 +1,19 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(to right, #000009, #B9C6D5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+header{
+    width: 95%;
+    height: 80%;
+    border: 1px solid #fdfdfd;
+    border-radius: 40px;
+}
