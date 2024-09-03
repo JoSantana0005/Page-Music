@@ -12,5 +12,7 @@
     <img src= "https://i.ibb.co/j86Drxg/css-3.png"  width = 150 height = 150>
     <img src= "https://i.ibb.co/pKKrwn3/javascript-js-icon-2048x2048-nyxvtvk0.png" width = 150 height = 150>
   </div>
-  <b>I'M GOING TO SEE HOW IT LOOKS AND NOT GIVE UP ON THE TRY jejejje</b>
+</div>
+<div align = "center">
+  <p>Let's see how it turns out if I don't give up on the attempt jejje</p>
 </div>
