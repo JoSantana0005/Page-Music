@@ -1,3 +1,4 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
 *{
     margin: 0;
     padding: 0;
@@ -18,6 +19,7 @@ header{
     border-radius: 10px;
     display: flex;
     flex-wrap: wrap;
+    overflow: hidden;
 
 }
 header .menu--panel,.song--panel{
@@ -26,9 +28,8 @@ header .menu--panel,.song--panel{
     height: 90%;
     border-radius: 10px;
     background-color: #254466;
-    opacity: 0.2;
+    
     box-shadow: 2px 1px 15px #000009;
-    color: #254466;
 }
 header .song--panel{
     width: 75%;
@@ -41,4 +42,60 @@ header .Play--music{
     background-color: #254466;
     opacity: 0.5;
     border-radius: 5px;
+    box-shadow: 2px 0 15px #000009;
+}
+header .menu--panel h1{
+    font-size: 20px;
+    color: #fdfdfd;
+    margin: 15px 30px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+}
+header .menu--panel .Playlist{
+    margin: 35px 0 0 20px;
+}
+header .menu--panel .Playlist h3{
+    font-size: 12px;
+    letter-spacing: 1.5px;
+    font-weight: 400;
+    padding: 3px 4px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    color: #9DB8E4;
+    transition: color .3s linear;
+    text-transform: capitalize;
+}
+header .menu--panel .Playlist h3:hover{
+    color: #fdfdfd;
+}
+header .menu--panel .Playlist h3 span{
+    position: relative;
+    margin-right: 30px;
+}
+header .menu--panel .Playlist h3 span::before{
+    content: '';
+    position: absolute;
+    width: 2px;
+    height: 2px;
+    border: 2px solid #fdfdfd;
+    border-radius: 50%;
+    top: -3px;
+    transition: .3s linear;
+}
+header .menu--panel .Playlist h3:hover span::before{
+    border: 2px solid #ea3;
+}
+header .menu--panel .Playlist h3 .bi{
+    display: none;
+}
+header .menu--panel .Playlist .Activo--boostrap{
+    color: #9383EC;
+}
+header .menu--panel .Playlist .Activo--boostrap span{
+    display: none;
+}
+header .menu--panel .Playlist .Activo--boostrap .bi{
+    display: flex;
+    margin-right: 30px;
 }
