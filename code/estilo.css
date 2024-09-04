@@ -277,3 +277,14 @@ header .Play--music .Bar__music input{
     transition: .1s linear;
     opacity: 0;
 }
+header .Play--music .vol__music{
+    position: relative;
+    width: 15%;
+    height: 3px;
+    background-color: #254466;
+    margin-left: 80px;
+}
+header .Play--music .vol__music .Bar__vol{
+    position: absolute;
+    
+}
