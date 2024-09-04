@@ -51,6 +51,7 @@ header .menu--panel h1{
     margin: 15px 30px;
     font-weight: 700;
     letter-spacing: 1.5px;
+    text-align: center;
 }
 header .menu--panel .Playlist{
     margin: 35px 0 0 20px;
@@ -59,7 +60,7 @@ header .menu--panel .Playlist h3{
     font-size: 12px;
     letter-spacing: 1.5px;
     font-weight: 400;
-    padding: 3px 4px;
+    padding: 5px 4px;
     cursor: pointer;
     display: flex;
     align-items: center;
@@ -102,9 +103,10 @@ header .menu--panel .Playlist .Activo--boostrap .bi{
 }
 header .menu--panel .menu--songs{
     width: 100%;
-    height: 298px;
-    border: 1px solid #fff;
-    margin-top: 20px;
+    height: 275px;
+    /**/
+    margin-top: 25px;
+    border-radius: 10px;
 }
 header .menu--panel .menu--songs li{
     padding: 5px 0 5px 20px;
@@ -120,9 +122,9 @@ header .menu--panel .menu--songs li:hover{
     background-color: #406486 ;
 }
 header .menu--panel .menu--songs li span{
-    font-size: 12px;
+    font-size: 10px;
     font-weight: 400;
-    color: #ffff;
+    color: #888;
 }
 header .menu--panel .menu--songs li img{
     width: 32px;
@@ -131,14 +133,15 @@ header .menu--panel .menu--songs li img{
     margin-left: 15px;
 }
 header .menu--panel .menu--songs li h5{
-    font-size: 13px;
+    font-size: 11px;
     margin-left: 30px;
     color: #fff;
     font-weight: 300;
     letter-spacing: 1px;
 }
 header .menu--panel .menu--songs li h5 .subTitle{
-    font-size: 10px;
+    font-size: 9px;
+    padding: 2px;
     color: #777;
 }
 header .menu--panel .menu--songs li .bi{
@@ -147,4 +150,46 @@ header .menu--panel .menu--songs li .bi{
     position: absolute;
     left: 220px;
     top: 10px
+}
+header .Play--music{
+    display: flex;
+    padding: 3px 25px;
+    align-items: center;
+}
+header .Play--music .Waves{
+    width: 35px;
+    height: 35px;
+    ;
+    padding: 0 0 5px 0;
+    display: flex;
+    align-items: flex-end;
+}
+header .Play--music .Waves .Wave1{
+    width: 7px;
+    height: 18px;
+    /*border: 1px solid #fff*/;
+    background-color: #ea3;
+    border-radius: 10px 10px 0 0;
+    margin: 0 3px 2px 3px;
+    padding: 1px;
+    animation: wave 1s linear infinite 0.1s;
+}
+header .Play--music .Waves .Wave1:nth-child(2){
+    height: 16px;
+    animation-delay: .4s;
+}
+header .Play--music .Waves .Wave1:nth-child(3){
+    height: 1px;
+    animation-delay: .6s;
+}
+@keyframes wave{
+    0%{
+        height: 5px;
+    }
+    50%{
+        height: 10px;
+    }
+    100%{
+        height: 20px;
+    }
 }
