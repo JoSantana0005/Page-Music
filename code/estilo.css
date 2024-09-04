@@ -40,10 +40,10 @@ header .song--panel{
 header .Play--music{
     width: 100%;
     height: 10%;
-    background-color: #254466;
-    opacity: 0.5;
+    margin-top: 2px;
+    background-color: #2C5880 ;
     border-radius: 5px;
-    box-shadow: 2px 0 15px #000009;
+    box-shadow: 2px 3px 15px #000009;
 }
 header .menu--panel h1{
     font-size: 20px;
@@ -149,7 +149,7 @@ header .menu--panel .menu--songs li .bi{
     color: #fdfdfd;
     position: absolute;
     left: 220px;
-    top: 10px
+    top: 8px
 }
 header .Play--music{
     display: flex;
@@ -159,10 +159,11 @@ header .Play--music{
 header .Play--music .Waves{
     width: 35px;
     height: 35px;
-    ;
+    margin-left: 5px;
     padding: 0 0 5px 0;
     display: flex;
     align-items: flex-end;
+    animation: unset;
 }
 header .Play--music .Waves .Wave1{
     width: 7px;
@@ -172,15 +173,16 @@ header .Play--music .Waves .Wave1{
     border-radius: 10px 10px 0 0;
     margin: 0 3px 2px 3px;
     padding: 1px;
-    animation: wave 1s linear infinite 0.1s;
+    animation: wave .4s linear infinite 0.1s;
+    animation: unset;
 }
 header .Play--music .Waves .Wave1:nth-child(2){
     height: 16px;
-    animation-delay: .4s;
+    animation-delay: .6s;
 }
 header .Play--music .Waves .Wave1:nth-child(3){
     height: 1px;
-    animation-delay: .6s;
+    animation-delay: .8s;
 }
 @keyframes wave{
     0%{
@@ -193,3 +195,43 @@ header .Play--music .Waves .Wave1:nth-child(3){
         height: 20px;
     }
 }
+header .Play--music img{
+    width: 35px;
+    height: 35px;
+    margin: 0;
+    margin-left: 35px;
+}
+header .Play--music h5{
+    font-size: 15px;
+    margin-left: 45px;
+    color: #fff;
+    font-weight: 300;
+    letter-spacing: 1px;
+}
+header .Play--music h5 .subtitle{
+    font-size: 10px;
+    color: #ccc;
+    padding: 1.5px;
+    font-weight: 600;
+}
+header .Play--music .icon--play{
+    margin-left: 25px;
+    padding: 0;
+}
+header .Play--music .icon--play .bi{
+    margin-left: 8px;
+    padding: 2px;
+    font-size: 21px;
+    color: #00000f;
+    cursor: pointer;
+    transition: .4s linear;
+}
+header .Play--music span{
+    margin-left: 25px;
+    font-weight: 500;
+    width: 34px;
+}
+header .Play--music #StartItems{
+    margin: 5px 25px;
+}
+
