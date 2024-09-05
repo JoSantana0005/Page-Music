@@ -333,7 +333,6 @@ header .song--panel {
 header .song--panel nav{
     width: 95%;
     height: 12%;
-    border: 1px solid #fff;
     margin: auto;
     margin-top: 8px;
     display: flex;
