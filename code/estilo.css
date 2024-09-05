@@ -411,5 +411,46 @@ header .song--panel nav .User--page img{
     filter: drop-shadow(0 0 20px #fff);
     border-radius: 40px;
 }
+header .song--panel .content__page{
+    width: 55%;
+    height: 25%;
+    font-size: 15px;
+    margin: 10px;
+    margin-bottom: 0;
+    padding-left: 5px;
+    
+}
+header .song--panel .content__page h1{
+    font-size: 2.2em;
+    letter-spacing: 1.5px;
+    color: #ea3;
+    text-shadow: 0 0 4px #000;
+    font-weight: 400;
+}
+header .song--panel .content__page p{
+    font-size: 0.8em;
+    margin-top: 5px;
+    color: #aaa;
+    font-weight: 600;
+    text-align: justify;
+    text-wrap: pretty;
+    letter-spacing: 0.5px;
+}
+header .song--panel .Buttons--sing{
+    border: 2px solid #fff;
+    width: 55%;
+    height: 30px;
+    text-align: center;
+    margin: 10px;
+    margin-top: 0;
+}
+header .song--panel .Buttons--sing{
+    border: 2px solid #fff;
+    width: 55%;
+    height: 30px;
+    text-align: center;
+    margin: 10px;
+    margin-top: 0;
+}
 
 
