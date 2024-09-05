@@ -355,14 +355,9 @@ header .song--panel nav ul li{
 }
 header .song--panel nav ul li:hover{
     color: #ea3;
-}
-header .song--panel nav ul li:nth-child(1){
-    border-bottom: 2px solid #666;
-}
-header .song--panel nav ul li:nth-child(1):hover{
-    color: #ea3;
     border-bottom: 2px solid #987;
 }
+
 header .song--panel nav .search{
     position: relative;
     width: 40%;
