@@ -460,12 +460,12 @@ header .song--panel .Buttons--sing button{
     outline: none;
 }
 header .song--panel .Buttons--sing button:nth-child(1){
-    color: #fff;
+    color: #ea3;
     width: 150px;
     height: 30px;
 }
 header .song--panel .Buttons--sing button:nth-child(2){
-    color: #ea3;
+    color: #fff;
     width: 150px;
     height: 30px;
 }
