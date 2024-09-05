@@ -421,14 +421,14 @@ header .song--panel .content__page{
     
 }
 header .song--panel .content__page h1{
-    font-size: 2.2em;
+    font-size: 1.4em;
     letter-spacing: 1.5px;
     color: #ea3;
     text-shadow: 0 0 4px #000;
     font-weight: 400;
 }
 header .song--panel .content__page p{
-    font-size: 0.8em;
+    font-size: 0.7em;
     margin-top: 5px;
     color: #aaa;
     font-weight: 600;
@@ -437,20 +437,47 @@ header .song--panel .content__page p{
     letter-spacing: 0.5px;
 }
 header .song--panel .Buttons--sing{
-    border: 2px solid #fff;
+    position: relative;
     width: 55%;
     height: 30px;
-    text-align: center;
     margin: 10px;
     margin-top: 0;
+    display: flex;
+    justify-content: left;
+    top: -30px
 }
-header .song--panel .Buttons--sing{
-    border: 2px solid #fff;
-    width: 55%;
+header .song--panel .Buttons--sing button{
+    padding: 0px 20px;
+    margin: 0;
+    margin-left: 65px;
+    border-radius: 20px;
+    color: #ea3;
+    letter-spacing: 1px;
+    background: transparent;
+    font-weight: 600;
+    transition: .1s linear;
+    cursor: pointer;
+    outline: none;
+}
+header .song--panel .Buttons--sing button:nth-child(1){
+    color: #fff;
+    width: 150px;
     height: 30px;
-    text-align: center;
-    margin: 10px;
-    margin-top: 0;
+}
+header .song--panel .Buttons--sing button:nth-child(2){
+    color: #ea3;
+    width: 150px;
+    height: 30px;
+}
+header .song--panel .Buttons--sing button:nth-child(1):hover{
+    color: #000;
+    background: linear-gradient(to left, #ffdd00, #aaa);
+    box-shadow: 2px 2px 15px #000;
+}
+header .song--panel .Buttons--sing button:nth-child(2):hover{
+    color: #9DB8E4;
+    background: linear-gradient(to left, #aaa, #000);
+    box-shadow: 2px 2px 15px #000;
 }
 
 
