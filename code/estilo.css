@@ -15,7 +15,6 @@ body{
 header{
     width: 95%;
     height: 80%;
-    border: 1px solid #fdfdfd;
     border-radius: 10px;
     display: flex;
     flex-wrap: wrap;
@@ -329,6 +328,22 @@ header .Play--music .vol__music .dotted__music::before{
 }
 header .song--panel {
     z-index: 2;
+    
+}
+header .song--panel::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 250px;
+    filter: opacity(0.3);
+    filter: brightness(1,1);
+    mix-blend-mode: screen;
+    background: url("../imagen/deiVfoto");
+    background-position: right;
+    background-repeat: no-repeat;
+    top: 25px;
+    left: -125px;
+    z-index: 1;
 }
 header .song--panel nav{
     width: 95%;
