@@ -334,21 +334,21 @@ header .song--panel::before{
     content: '';
     position: absolute;
     width: 100%;
-    height: 250px;
+    height: 230px;
     filter: opacity(0.3);
     filter: brightness(1,1);
     mix-blend-mode: screen;
     background: url("../imagen/deiVfoto");
     background-position: right;
     background-repeat: no-repeat;
-    top: 25px;
-    left: -125px;
-    z-index: 1;
+    top: 30px;
+    left: -135px;
 }
 header .song--panel nav{
     width: 95%;
     height: 12%;
     margin: auto;
+    position: relative;
     margin-top: 8px;
     display: flex;
     justify-content: left;
@@ -489,5 +489,105 @@ header .song--panel .Buttons--sing button:nth-child(2):hover{
     background: linear-gradient(to left, #aaa, #000);
     box-shadow: 2px 2px 15px #000;
 }
-
+header .song--panel .Popular__songs{
+    width: 95%;
+    height: auto;
+    border: 1px solid #fff;
+    margin: 5px 20px;
+}
+header .song--panel .Popular__songs .Title__h4{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-right: 45px;
+}
+header .song--panel .Popular__songs .Title__h4 h4{
+    color: #ea3;
+    font-size: 15px;
+    font-weight: 700;
+    margin-left: 10px;
+}
+header .song--panel .Popular__songs .Title__h4 .Btn__icon{
+    margin: 5px;
+}
+header .song--panel .Popular__songs .Title__h4 .Btn__icon .bi{
+    color: #fff;
+    font-size: 15px;
+    margin-left: 10px;
+    cursor: pointer;
+    transition: .3s linear;
+}
+header .song--panel .Popular__songs .Title__h4 .Btn__icon .bi:hover{
+    color: #ea3;
+}
+header .song--panel .Popular__songs .Music{
+    width: 100%;
+    height: 125px;
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+}
+header .song--panel .Popular__songs .Music::-webkit-scrollbar{
+    display: flex;
+}
+header .song--panel .Popular__songs .Music li{
+    min-width: 95px;
+    height: 95px;
+    list-style: none;
+    margin-left: 15px;
+    position: relative;
+    top: -12px;
+    transition: .3s linear;
+}
+header .song--panel .Popular__songs .Music li:hover{
+    background: #128;
+}
+header .song--panel .Popular__songs .Music li .Imagen__play{
+    position: relative;
+    width: 90px;
+    height: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+header .song--panel .Popular__songs .Music li .Imagen__play{
+    position: relative;
+    width: 90px;
+    height: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+header .song--panel .Popular__songs .Music li .Imagen__play img{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+header .song--panel .Popular__songs .Music li .Imagen__play .bi{
+    position: absolute;
+    cursor: pointer;
+    font-size: 20px;
+    color: #bbb;
+    transition: .3s linear;
+    opacity: 0.2;
+}
+header .song--panel .Popular__songs .Music li .Imagen__play:hover .bi{
+    opacity: 1;
+}
+header .song--panel .Popular__songs .Music h5{
+    text-align: center;
+    padding: 1px;
+    line-height: 15px;
+    font-size: 12px;
+    color: #aaa;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+header .song--panel .Popular__songs .Music h5 .subtitle{
+    font-size: 10px;
+}
 
