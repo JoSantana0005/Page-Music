@@ -128,6 +128,7 @@ header .menu--panel .menu--songs li img{
     width: 32px;
     height: 32px;
     margin: 0;
+    filter: drop-shadow(2px 1px 15px #555);
     margin-left: 15px;
 }
 header .menu--panel .menu--songs li h5{
@@ -139,14 +140,14 @@ header .menu--panel .menu--songs li h5{
 }
 header .menu--panel .menu--songs li h5 .subTitle{
     font-size: 9px;
-    padding: 2px;
+    padding: 1px;
     color: #777;
 }
 header .menu--panel .menu--songs li .bi{
     font-size: 20px;
     color: #fdfdfd;
     position: absolute;
-    left: 220px;
+    left: 250px;
     top: 8px
 }
 header .Play--music{
@@ -546,8 +547,8 @@ header .song--panel .Popular__songs .Music li:hover{
 }
 header .song--panel .Popular__songs .Music li .Imagen__play{
     position: relative;
-    width: 90px;
-    height: 90px;
+    width: 100px;
+    height: 100px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -557,6 +558,7 @@ header .song--panel .Popular__songs .Music li .Imagen__play img{
     position: relative;
     width: 100%;
     height: 100%;
+    border-radius: 5px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -564,6 +566,7 @@ header .song--panel .Popular__songs .Music li .Imagen__play img{
 header .song--panel .Popular__songs .Music li  h5{
     text-wrap: nowrap;
     text-align: left;
+    font-size: 11px;
 }
 header .song--panel .Popular__songs .Music li .Imagen__play .bi{
     position: absolute;
@@ -596,7 +599,7 @@ header .song--panel .Popular__songs .Sing__popular{
 }
 header .song--panel .Popular__songs .Artists{
     width: 100%;
-    height: 120px;
+    height: 130px;
     margin-top: 2px;
     display: flex;
     padding: 5px;
@@ -618,10 +621,10 @@ header .song--panel .Popular__songs .Artists .Btn__icon .bi{
 header .song--panel .Popular__songs .Artists li{
     position: relative;
     list-style: none;
-    width: 65%;
-    height: 120px;
+    width: 100%;
+    height: auto;
     padding: 5px;
-    top: 3px;
+    top: 15px;
 }
 header .song--panel .Popular__songs .Artists li .Imagen__play{
     position: relative;
@@ -630,7 +633,7 @@ header .song--panel .Popular__songs .Artists li .Imagen__play{
     gap: 12px;
 }
 header .song--panel .Popular__songs .Artists img{
-    width: 75px;
+    width: 70px;
     height: 100%;
     border-radius: 50%;
     outline: 2px solid #000;
