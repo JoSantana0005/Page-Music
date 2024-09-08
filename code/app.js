@@ -198,3 +198,105 @@ music.addEventListener('ended', () =>{
 // event para el volumen de la musica
 let icon = document.getElementById('Vol--icon');
 let volumen = document.getElementById('seek--vol');
+let dot_vol = document.getElementById('vol__dot');
+let bar__vol = document.getElementsByClassName('bar__vol2')[0]
+
+volumen.addEventListener('change', () =>{
+  if(volumen.value == 0){
+    icon.classList.remove('bi-volume-down')
+    icon.classList.add('bi-volume-mute-fill')
+    icon.classList.remove('bi-volume-up')
+  }
+  if(volumen.value > 0){
+    icon.classList.add('bi-volume-down')
+    icon.classList.remove('bi-volume-mute-fill')
+    icon.classList.remove('bi-volume-up-fill')
+  }
+  if(volumen.value > 50){
+    icon.classList.remove('bi-volume-down')
+    icon.classList.remove('bi-volume-mute-fill')
+    icon.classList.add('bi-volume-up')
+  }
+  let vol__music = volumen.value
+  bar__vol.style.width = `${vol__music}%`
+  dot_vol.style.left = `${vol__music}%`
+  music.volume = vol__music/100
+})
+
+// Event de los arrow
+let left = document.getElementById('Back-music')
+let right = document.getElementById('Next-music')
+
+left.addEventListener('click', () =>{
+     index -= 1
+     if (index < 1) {
+
+      index = Array.from(document.getElementsByClassName('SongMusic')).length
+      }
+      music.src = `../audio/${index}.mp3`
+      poster.src = `../imagen/${index}.jpeg`
+      let song__title = songs.filter((ele) =>{
+        return ele.id == index
+      })
+ 
+      song__title.forEach(ele =>{
+        let {content} = ele
+        Title.style = 'color: #aaa; font-size: 11px'
+        Title.innerHTML = content
+       })
+       makeplay()
+ 
+       document.getElementById(`${index}`).classList.remove('bi-play-fill');
+       document.getElementById(`${index}`).classList.add('bi-pause-fill');
+ 
+       makebackground()
+       Array.from(document.getElementsByClassName('SongMusic'))[`${index-1}`].style.background = "#000"
+       music.play()
+})
+right.addEventListener('click', () =>{
+  index -= 0
+  index += 1
+  if (index > Array.from(document.getElementsByClassName('SongMusic')).length) {
+    index = 1
+   }
+   music.src = `../audio/${index}.mp3`
+   poster.src = `../imagen/${index}.jpeg`
+   let song__title = songs.filter((ele) =>{
+     return ele.id == index
+   })
+
+   song__title.forEach(ele =>{
+     let {content} = ele
+     Title.style = 'color: #aaa; font-size: 11px'
+     Title.innerHTML = content
+    })
+    makeplay()
+
+    document.getElementById(`${index}`).classList.remove('bi-play-fill');
+    document.getElementById(`${index}`).classList.add('bi-pause-fill');
+
+    makebackground()
+    Array.from(document.getElementsByClassName('SongMusic'))[`${index-1}`].style.background = "#000"
+    music.play()
+})
+
+// Event para los scroll
+let left__scroll = document.getElementById('Left--scroll--panel')
+let right__scroll = document.getElementById('right--scroll--panel')
+let popular__song = document.getElementsByClassName('Music')[0];
+left__scroll.addEventListener('click',()=>{
+  popular__song.scrollLeft -= 330
+})
+right__scroll.addEventListener('click',()=>{
+  popular__song.scrollLeft += 330
+})
+
+let left__scrolls = document.getElementById('Left--scrolls--panel')
+let right__scrolls = document.getElementById('right--scrolls--panel')
+let popular__singer = document.getElementsByClassName('Artists')[0];
+left__scrolls.addEventListener('click',()=>{
+  popular__singer.scrollLeft -= 330
+})
+right__scrolls.addEventListener('click',()=>{
+  popular__singer.scrollLeft += 330
+})

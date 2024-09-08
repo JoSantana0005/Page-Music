@@ -288,12 +288,13 @@ header .Play--music .vol__music{
     height: 2px;
     background-color: #254466;
     margin-left: 50px;
+    transition: .1s linear;
 }
 header .Play--music .vol__music .bi{
     position: absolute;
     font-size: 20px;
     top: -10px;
-    left: 0;
+    left: -25px;
 }
 header .Play--music .vol__music input{
     width: 160px;
@@ -309,8 +310,10 @@ header .Play--music .vol__music input{
 }
 header .Play--music .vol__music .bar__vol2{
     position: absolute;
-    width: 20%;
+    width: 100%;
+    background-color: #ea3;
     height: 100%;
+    transition: .1s linear;
 }
 header .Play--music .vol__music .dotted__music{
     position: absolute;
@@ -613,6 +616,7 @@ header .song--panel .Popular__songs .Artists{
     position: relative;
     top: -30px;
     gap: 10px;
+    overflow-y: auto;
     overflow-x: auto;
     scroll-behavior: smooth;
 }
