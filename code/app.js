@@ -3,32 +3,77 @@ const songs = [
     {
       id: '1',
       content: 'X2 <div class="subTitle"> Dei V </div> ',
-      img: '../imagen/DEIV.JPEG'
+      img: '../imagen/1.JPEG'
     },
     {
       id: '2',
       content: 'Clima <div class="subTitle"> Dei V </div>',
-      img: '../imagen/clima.jpeg'
+      img: '../imagen/2.jpeg'
     },
     {
       id: '3',
       content: ' Martini <div class="subTitle"> Dei V </div>',
-      img: '../imagen/Martini.jpeg'
+      img: '../imagen/3.jpeg'
     },
     {
       id: '4',
       content: 'Rapido <div class="subTitle"> Dei V feat Cris MJ </div>',
-      img: '../imagen/rapido.jpeg'
+      img: '../imagen/4.jpeg'
     },
     {
         id: '5',
         content: 'Quien es Dei V? <div class="subTitle"> Dei V </div>',
-        img: '../imagen/rapido.jpeg'
+        img: '../imagen/4.jpeg'
     },
     {
         id: '6',
         content: 'Treding REMIX <div class="subTitle"> Dei V feat Myke Towers </div>',
-        img: '../imagen/Treding.jpeg'
+        img: '../imagen/5.jpeg'
+    },
+    {
+      id: '7',
+      content: 'Treding REMIX <div class="subTitle"> Dei V feat Myke Towers </div>',
+      img: '../imagen/5.jpeg'
+    },
+    {
+      id: '8',
+      content: 'Treding REMIX <div class="subTitle"> Dei V feat Myke Towers </div>',
+      img: '../imagen/5.jpeg'
+    },
+    {
+      id: '9',
+      content: 'Treding REMIX <div class="subTitle"> Dei V feat Myke Towers </div>',
+      img: '../imagen/5.jpeg'
+    },
+    {
+      id: '10',
+      content: 'Treding REMIX <div class="subTitle"> Dei V feat Myke Towers </div>',
+      img: '../imagen/5.jpeg'
+    },
+    {
+      id: '11',
+      content: 'Treding REMIX <div class="subTitle"> Dei V feat Myke Towers </div>',
+      img: '../imagen/5.jpeg'
+    },
+    {
+      id: '12',
+      content: 'Treding REMIX <div class="subTitle"> Dei V feat Myke Towers </div>',
+      img: '../imagen/5.jpeg'
+    },
+    {
+      id: '13',
+      content: 'Treding REMIX <div class="subTitle"> Dei V feat Myke Towers </div>',
+      img: '../imagen/5.jpeg'
+    },
+    {
+      id: '14',
+      content: 'Treding REMIX <div class="subTitle"> Dei V feat Myke Towers </div>',
+      img: '../imagen/5.jpeg'
+    },
+    {
+      id: '15',
+      content: 'Treding REMIX <div class="subTitle"> Dei V feat Myke Towers </div>',
+      img: '../imagen/5.jpeg'
     },
   ];
   
