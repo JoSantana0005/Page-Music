@@ -1,3 +1,4 @@
+const music = new Audio("../audio/X2.mp3")
 const songs = [
     {
       id: '1',
@@ -44,3 +45,16 @@ const songs = [
       console.error(`No se encontró elemento img en el elemento SongMusic ${i}`);
     }
   });
+  //evnto de los iconos para reproducir y cambiar musica
+  let play = document.getElementById('MasterPlay')
+  play.addEventListener('click',() =>{
+    if(music.paused || music.currentTime <= 0){
+      play.classList.remove('bi-play-fill')
+      play.classList.add('bi-pause-fill')
+      music.play();
+    }else{
+      play.classList.remove('bi-pause-fill')
+      play.classList.add('bi-play-fill')
+      music.pause()
+    }
+  })
