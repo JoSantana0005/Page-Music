@@ -95,15 +95,15 @@ const songs = [
   let wave = document.getElementsByClassName('Waves')[0]
   play.addEventListener('click',() =>{
     if(music.paused || music.currentTime <= 0){
+      music.play()
       play.classList.remove('bi-play-fill');
       play.classList.add('bi-pause-fill');
       wave.classList.add('active');
-      music.play();
     }else{
+      music.pause()
       play.classList.remove('bi-pause-fill');
       play.classList.add('bi-play-fill');
       wave.classList.remove('active');
-      music.pause()
     }
   })
   //Event para pausar y reproducir las canciones de la playlist
@@ -153,29 +153,48 @@ const songs = [
     })
   }) 
 
-  // event para colocar el tiempo de la cancion
-  let start = document.getElementById('StartItems')
-  let end = document.getElementById('EndItems')
+// event para colocar el tiempo de la cancion
+let start = document.getElementById('StartItems')
+let end = document.getElementById('EndItems')
+let seek = document.getElementById('seek-play')
+let bar__music = document.getElementById('bar__music2')
+let dot = document.getElementsByClassName('dotted')[0]
+music.addEventListener('timeupdate', () =>{
+  let music__cur = music.currentTime
+  let music__dura = music.duration
+  let minu = Math.floor(music__dura/60)
+  let second = Math.floor(music__dura%60)
+  
+  if (second < 10) {
+    second = `0${second}`
+  }
+  end.style = "font-weight: 300"
+  end.innerText = `${minu} : ${second}`
+  
+  let minu1 = Math.floor(music__cur/60)
+  let second1 = Math.floor(music__cur%60)
+  
+  if (second1 < 10) {
+    second1 = `0${second1}`
+  }
+  start.style = "font-weight: 300"
+  start.innerText = `${minu1} : ${second1}`
+  let progresson = parseInt((music__cur/music__dura)*100)
+  seek.value = progresson
+  let seekBar = seek.value
+  bar__music.style.width = `${seekBar}%`
+  dot.style.left = `${seekBar}%`
+})
+// event para el seek 
+seek.addEventListener('change', () =>{
+     music.currentTime = (seek.value * music.duration)/100 
+})
+music.addEventListener('ended', () =>{
+  play.classList.remove('bi-pause-fill');
+  play.classList.add('bi-play-fill');
+  wave.classList.remove('active');
+})
 
-  music.addEventListener('timeupdate', () =>{
-    let music__cur = music.currentTime
-    let music__dura = music.duration
-
-    let minu = Math.floor(music__dura/60)
-    let second = Math.floor(music__dura%60)
-    
-    if (second < 10) {
-      second = `0${second}`
-    }
-    end.style = "font-weight: 300"
-    end.innerText = `${minu} : ${second}`
-    
-    let minu1 = Math.floor(music__cur/60)
-    let second1 = Math.floor(music__cur%60)
-    
-    if (second1 < 10) {
-      second1 = `0${second1}`
-    }
-    start.style = "font-weight: 300"
-    start.innerText = `${minu1} : ${second1}`
-  })
+// event para el volumen de la musica
+let icon = document.getElementById('Vol--icon');
+let volumen = document.getElementById('seek--vol');
