@@ -205,26 +205,26 @@ header .Play--music img{
     margin-left: 35px;
 }
 header .Play--music h5{
-    font-size: 15px;
-    margin-left: 45px;
+    font-size: 11px;
+    margin-left: 25px;
     color: #fff;
     font-weight: 300;
     letter-spacing: 1px;
 }
 header .Play--music h5 .subtitle{
-    font-size: 10px;
     color: #ccc;
     padding: 1.5px;
     font-weight: 600;
+    text-wrap: nowrap;
 }
 header .Play--music .icon--play{
-    margin-left: 25px;
+    margin-left: 15px;
     padding: 0;
 }
 header .Play--music .icon--play .bi{
-    margin-left: 8px;
+    margin-left: 2px;
     padding: 2px;
-    font-size: 21px;
+    font-size: 18px;
     color: #00000f;
     cursor: pointer;
     transition: .4s linear;
@@ -236,7 +236,7 @@ header .Play--music span{
     align-self: center;
 }
 header .Play--music #StartItems{
-    margin: 0px 15px;
+    margin:  5px;
 }
 header .Play--music .Bar__music{
     display: flex;
@@ -245,7 +245,7 @@ header .Play--music .Bar__music{
     height: 3px;
     background-color: #254466;
     position: relative;
-    margin: 0 2px 3px 2px;
+    margin: 0 10px 3px 2px;
 }
 
 header .Play--music .Bar__music .bar__music2{

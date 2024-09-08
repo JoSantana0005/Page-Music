@@ -1,4 +1,4 @@
-const music = new Audio("../audio/X2.mp3")
+const music = new Audio("../audio/1.mp3")
 const songs = [
     {
       id: '1',
@@ -23,12 +23,12 @@ const songs = [
     {
         id: '5',
         content: 'Quien es Dei V? <div class="subTitle"> Dei V </div>',
-        img: '../imagen/4.jpeg'
+        img: '../imagen/5.jpeg'
     },
     {
         id: '6',
         content: 'Treding REMIX <div class="subTitle"> Dei V feat Myke Towers </div>',
-        img: '../imagen/5.jpeg'
+        img: '../imagen/6.jpeg'
     },
     {
       id: '7',
@@ -114,7 +114,8 @@ const songs = [
     }) 
   }
   let index = 0
-
+  let poster = document.getElementById('Poster')
+  let Title = document.getElementById('title')
   Array.from(document.getElementsByClassName('PlaylistPlay')).forEach((element) =>{
     element.addEventListener('click', (e)=>{
       index = e.target.id
@@ -123,6 +124,16 @@ const songs = [
       e.target.classList.remove('bi-play-circle-fill');
       e.target.classList.add('bi-pause-circle-fill');
       music.src = `../audio/${index}.mp3`
+      poster.src = `../imagen/${index}.jpeg`
+      let song__title = songs.filter((ele) =>{
+        return ele.id == index
+      })
+
+      song__title.forEach(ele =>{
+        let {content} = ele
+        Title.style = 'color: #aaa; font-size: 11px'
+        Title.innerHTML = content
+      })
       music.play()
     })
   }) 
