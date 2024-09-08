@@ -163,6 +163,19 @@ const songs = [
 
     let minu = Math.floor(music__dura/60)
     let second = Math.floor(music__dura%60)
+    
+    if (second < 10) {
+      second = `0${second}`
+    }
     end.style = "font-weight: 300"
-    end.innerHTML = `${minu} : ${second}`
+    end.innerText = `${minu} : ${second}`
+    
+    let minu1 = Math.floor(music__cur/60)
+    let second1 = Math.floor(music__cur%60)
+    
+    if (second1 < 10) {
+      second1 = `0${second1}`
+    }
+    start.style = "font-weight: 300"
+    start.innerText = `${minu1} : ${second1}`
   })
