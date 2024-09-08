@@ -233,10 +233,11 @@ header .Play--music span{
     margin-left: 25px;
     font-weight: 300;
     width: 32px;
+    font-size: 13px;
     align-self: center;
 }
 header .Play--music #StartItems{
-    margin:  5px;
+    margin-left:  40px;
 }
 header .Play--music .Bar__music{
     display: flex;

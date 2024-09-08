@@ -107,10 +107,15 @@ const songs = [
     }
   })
   //Event para pausar y reproducir las canciones de la playlist
-  let makeplay = () =>{
+  const makeplay = () =>{
     Array.from(document.getElementsByClassName('PlaylistPlay')).forEach((element) =>{
       element.classList.add('bi-play-circle-fill');
       element.classList.remove('bi-pause-circle-fill');
+    }) 
+  }
+  const makebackground = () =>{
+    Array.from(document.getElementsByClassName('SongMusic')).forEach((element) =>{
+      element.style.background = "000"
     }) 
   }
   let index = 0
@@ -134,6 +139,30 @@ const songs = [
         Title.style = 'color: #aaa; font-size: 11px'
         Title.innerHTML = content
       })
+      play.classList.remove('bi-play-fill');
+      play.classList.add('bi-pause-fill');
+      wave.classList.add('active');
+      music.addEventListener('ended',() =>{
+        play.classList.remove('bi-pause-fill');
+        play.classList.add('bi-play-fill');
+        wave.classList.remove('active');
+      })
+      makebackground()
+      Array.from(document.getElementsByClassName('SongMusic'))[`${index-1}`].style.background = "#000"
       music.play()
     })
   }) 
+
+  // event para colocar el tiempo de la cancion
+  let start = document.getElementById('StartItems')
+  let end = document.getElementById('EndItems')
+
+  music.addEventListener('timeupdate', () =>{
+    let music__cur = music.currentTime
+    let music__dura = music.duration
+
+    let minu = Math.floor(music__dura/60)
+    let second = Math.floor(music__dura%60)
+    end.style = "font-weight: 300"
+    end.innerHTML = `${minu} : ${second}`
+  })
