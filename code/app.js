@@ -47,14 +47,37 @@ const songs = [
   });
   //evnto de los iconos para reproducir y cambiar musica
   let play = document.getElementById('MasterPlay')
+  let wave = document.getElementsByClassName('Waves')[0]
   play.addEventListener('click',() =>{
     if(music.paused || music.currentTime <= 0){
-      play.classList.remove('bi-play-fill')
-      play.classList.add('bi-pause-fill')
+      play.classList.remove('bi-play-fill');
+      play.classList.add('bi-pause-fill');
+      wave.classList.add('active');
       music.play();
     }else{
-      play.classList.remove('bi-pause-fill')
-      play.classList.add('bi-play-fill')
+      play.classList.remove('bi-pause-fill');
+      play.classList.add('bi-play-fill');
+      wave.classList.remove('active');
       music.pause()
     }
   })
+  //Event para pausar y reproducir las canciones de la playlist
+  let makeplay = () =>{
+    Array.from(document.getElementsByClassName('PlaylistPlay')).forEach((element) =>{
+      element.classList.add('bi-play-circle-fill');
+      element.classList.remove('bi-pause-circle-fill');
+    }) 
+  }
+  let index = 0
+
+  Array.from(document.getElementsByClassName('PlaylistPlay')).forEach((element) =>{
+    element.addEventListener('click', (e)=>{
+      index = e.target.id
+      console.log(index)
+      makeplay();
+      e.target.classList.remove('bi-play-circle-fill');
+      e.target.classList.add('bi-pause-circle-fill');
+      music.src = `../audio/${index}.mp3`
+      music.play()
+    })
+  }) 
