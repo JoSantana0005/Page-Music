@@ -32,48 +32,48 @@ const songs = [
     },
     {
       id: '7',
-      content: 'Treding REMIX <div class="subTitle"> Dei V feat Myke Towers </div>',
-      img: '../imagen/5.jpeg'
+      content: 'Verde Menta <div class="subTitle">Rauw Alejandro</div>',
+      img: '../imagen/7.jpeg'
     },
     {
       id: '8',
-      content: 'Treding REMIX <div class="subTitle"> Dei V feat Myke Towers </div>',
-      img: '../imagen/5.jpeg'
+      content: 'By the way <div class="subTitle"> RHCP </div>',
+      img: '../imagen/8.jpeg'
     },
     {
       id: '9',
-      content: 'Treding REMIX <div class="subTitle"> Dei V feat Myke Towers </div>',
-      img: '../imagen/5.jpeg'
+      content: 'Ponte pa mi <div class="subTitle"> Justin Quiles </div>',
+      img: '../imagen/9.jpeg'
     },
     {
       id: '10',
-      content: 'Treding REMIX <div class="subTitle"> Dei V feat Myke Towers </div>',
-      img: '../imagen/5.jpeg'
+      content: 'Un coco <div class="subTitle"> Bad Bunny </div>',
+      img: '../imagen/10.jpeg'
     },
     {
       id: '11',
-      content: 'Treding REMIX <div class="subTitle"> Dei V feat Myke Towers </div>',
-      img: '../imagen/5.jpeg'
+      content: 'I known <div class="subTitle"> Travis Scott </div>',
+      img: '../imagen/11.jpeg'
     },
     {
       id: '12',
-      content: 'Treding REMIX <div class="subTitle"> Dei V feat Myke Towers </div>',
-      img: '../imagen/5.jpeg'
+      content: 'Fantasias <div class="subTitle"> Mora </div>',
+      img: '../imagen/12.jpeg'
     },
     {
       id: '13',
-      content: 'Treding REMIX <div class="subTitle"> Dei V feat Myke Towers </div>',
-      img: '../imagen/5.jpeg'
+      content: 'Hoy Aqui <div class="subTitle"> Rauw Alejandro </div>',
+      img: '../imagen/13.jpeg'
     },
     {
       id: '14',
-      content: 'Treding REMIX <div class="subTitle"> Dei V feat Myke Towers </div>',
-      img: '../imagen/5.jpeg'
+      content: 'Noche de Aventura <div class="subTitle"> Ozuna </div>',
+      img: '../imagen/14.jpeg'
     },
     {
       id: '15',
-      content: 'Treding REMIX <div class="subTitle"> Dei V feat Myke Towers </div>',
-      img: '../imagen/5.jpeg'
+      content: 'La amiga <div class="subTitle"> Justin Quiles </div>',
+      img: '../imagen/15.jpeg'
     },
   ];
   
