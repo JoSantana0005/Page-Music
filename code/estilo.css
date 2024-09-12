@@ -199,14 +199,14 @@ header .Play--music .active .Wave1:nth-child(3){
     }
 }
 header .Play--music img{
-    width: 35px;
-    height: 35px;
+    width: 40px;
+    height: 40px;
     margin: 0;
-    margin-left: 35px;
+    margin-left: 15px;
 }
 header .Play--music h5{
     font-size: 11px;
-    margin-left: 25px;
+    margin-left: 15px;
     color: #fff;
     font-weight: 300;
     letter-spacing: 1px;
@@ -215,15 +215,14 @@ header .Play--music h5 .subtitle{
     color: #ccc;
     padding: 1.5px;
     font-weight: 600;
-    text-wrap: nowrap;
+    text-wrap: wrap;
 }
 header .Play--music .icon--play{
-    margin-left: 15px;
+    margin-left: 10px;
     padding: 0;
 }
 header .Play--music .icon--play .bi{
-    margin-left: 2px;
-    padding: 2px;
+    margin: 0 3px;
     font-size: 18px;
     color: #00000f;
     cursor: pointer;
@@ -311,7 +310,7 @@ header .Play--music .vol__music input{
 header .Play--music .vol__music .bar__vol2{
     position: absolute;
     width: 100%;
-    background-color: #ea3;
+    background-color: #777;
     height: 100%;
     transition: .1s linear;
 }
