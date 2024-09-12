@@ -222,7 +222,7 @@ header .Play--music .icon--play{
     padding: 0;
 }
 header .Play--music .icon--play .bi{
-    margin: 0 3px;
+    margin: 0 4px;
     font-size: 18px;
     color: #00000f;
     cursor: pointer;
