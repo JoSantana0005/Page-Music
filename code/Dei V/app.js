@@ -1,84 +1,83 @@
-const music = new Audio("../audio/1.mp3")
+const music = new Audio("../../audio/1.mp3")
 const songs = [
     {
       id: '1',
       content: 'X2 <div class="subTitle"> Dei V </div> ',
-      img: '../imagen/1.JPEG'
+      img: '../../imagen/1.jpeg'
     },
     {
       id: '2',
       content: 'Clima <div class="subTitle"> Dei V </div>',
-      img: '../imagen/2.jpeg'
+      img: '../../imagen/2.jpeg'
     },
     {
       id: '3',
       content: ' Martini <div class="subTitle"> Dei V </div>',
-      img: '../imagen/3.jpeg'
+      img: '../../imagen/3.jpeg'
     },
     {
       id: '4',
       content: 'Rapido <div class="subTitle"> Dei V feat Cris MJ </div>',
-      img: '../imagen/4.jpeg'
+      img: '../../imagen/4.jpeg'
     },
     {
         id: '5',
         content: 'Quien es Dei V? <div class="subTitle"> Dei V </div>',
-        img: '../imagen/5.jpeg'
+        img: '../../imagen/5.jpeg'
     },
     {
         id: '6',
         content: 'Treding REMIX <div class="subTitle"> Dei V feat Myke Towers </div>',
-        img: '../imagen/6.jpeg'
+        img: '../../imagen/6.jpeg'
     },
     {
       id: '7',
       content: 'Verde Menta <div class="subTitle">Rauw Alejandro</div>',
-      img: '../imagen/7.jpeg'
+      img: '../../imagen/7.jpeg'
     },
     {
       id: '8',
       content: 'By the way <div class="subTitle"> RHCP </div>',
-      img: '../imagen/8.jpeg'
+      img: '../../imagen/8.jpeg'
     },
     {
       id: '9',
       content: 'Ponte pa mi <div class="subTitle"> Justin Quiles </div>',
-      img: '../imagen/9.jpeg'
+      img: '../../imagen/9.jpeg'
     },
     {
       id: '10',
       content: 'Un coco <div class="subTitle"> Bad Bunny </div>',
-      img: '../imagen/10.jpeg'
+      img: '../../imagen/10.jpeg'
     },
     {
       id: '11',
       content: 'I known <div class="subTitle"> Travis Scott </div>',
-      img: '../imagen/11.jpeg'
+      img: '../../imagen/11.jpeg'
     },
     {
       id: '12',
       content: 'Fantasias <div class="subTitle"> Mora </div>',
-      img: '../imagen/12.jpeg'
+      img: '../../imagen/12.jpeg'
     },
     {
       id: '13',
       content: 'Hoy Aqui <div class="subTitle"> Rauw Alejandro </div>',
-      img: '../imagen/13.jpeg'
+      img: '../../imagen/13.jpeg'
     },
     {
       id: '14',
       content: 'Noche de Aventura <div class="subTitle"> Ozuna </div>',
-      img: '../imagen/14.jpeg'
+      img: '../../imagen/14.jpeg'
     },
     {
       id: '15',
       content: 'La amiga <div class="subTitle"> Justin Quiles </div>',
-      img: '../imagen/15.jpeg'
+      img: '../../imagen/15.jpeg'
     },
   ];
   
   const songElements = document.getElementsByClassName('SongMusic');
-  
   Array.from(songElements).forEach((element, i) => {
     const imgElement = element.getElementsByTagName('img')[0];
     const nameElemnt = element.getElementsByTagName('h5')[0];
@@ -90,7 +89,7 @@ const songs = [
       console.error(`No se encontró elemento img en el elemento SongMusic ${i}`);
     }
   });
-  //evnto de los iconos para reproducir y cambiar musica
+  //evento de los iconos para reproducir y cambiar musica
   let play = document.getElementById('MasterPlay')
   let wave = document.getElementsByClassName('Waves')[0]
   play.addEventListener('click',() =>{
@@ -126,10 +125,10 @@ const songs = [
       index = e.target.id
       console.log(index)
       makeplay();
-      e.target.classList.remove('bi-play-circle-fill');
-      e.target.classList.add('bi-pause-circle-fill');
-      music.src = `../audio/${index}.mp3`
-      poster.src = `../imagen/${index}.jpeg`
+      e.target.classList.add('bi-play-circle-fill');
+      e.target.classList.remove('bi-pause-circle-fill');
+      music.src = `../../audio/${index}.mp3`
+      poster.src = `../../imagen/${index}.jpeg`
       let song__title = songs.filter((ele) =>{
         return ele.id == index
       })
@@ -190,8 +189,8 @@ seek.addEventListener('change', () =>{
      music.currentTime = (seek.value * music.duration)/100 
 })
 music.addEventListener('ended', () =>{
-  play.classList.remove('bi-pause-fill');
-  play.classList.add('bi-play-fill');
+  play.classList.add('bi-pause-fill');
+  play.classList.remove('bi-play-fill');
   wave.classList.remove('active');
 })
 
@@ -233,8 +232,8 @@ left.addEventListener('click', () =>{
 
       index = Array.from(document.getElementsByClassName('SongMusic')).length
       }
-      music.src = `../audio/${index}.mp3`
-      poster.src = `../imagen/${index}.jpeg`
+      music.src = `../../audio/${index}.mp3`
+      poster.src = `../../imagen/${index}.jpeg`
       let song__title = songs.filter((ele) =>{
         return ele.id == index
       })
@@ -246,8 +245,8 @@ left.addEventListener('click', () =>{
        })
        makeplay()
  
-       document.getElementById(`${index}`).classList.remove('bi-play-fill');
-       document.getElementById(`${index}`).classList.add('bi-pause-fill');
+       document.getElementById(`${index}`).classList.add('bi-play-fill');
+       document.getElementById(`${index}`).classList.remove('bi-pause-fill');
  
        makebackground()
        Array.from(document.getElementsByClassName('SongMusic'))[`${index-1}`].style.background = "#000"
@@ -259,8 +258,8 @@ right.addEventListener('click', () =>{
   if (index > Array.from(document.getElementsByClassName('SongMusic')).length) {
     index = 1
    }
-   music.src = `../audio/${index}.mp3`
-   poster.src = `../imagen/${index}.jpeg`
+   music.src = `../../audio/${index}.mp3`
+   poster.src = `../../imagen/${index}.jpeg`
    let song__title = songs.filter((ele) =>{
      return ele.id == index
    })
@@ -272,8 +271,8 @@ right.addEventListener('click', () =>{
     })
     makeplay()
 
-    document.getElementById(`${index}`).classList.remove('bi-play-fill');
-    document.getElementById(`${index}`).classList.add('bi-pause-fill');
+    document.getElementById(`${index}`).classList.add('bi-play-fill');
+    document.getElementById(`${index}`).classList.remove('bi-pause-fill');
 
     makebackground()
     Array.from(document.getElementsByClassName('SongMusic'))[`${index-1}`].style.background = "#000"

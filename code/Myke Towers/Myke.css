@@ -344,10 +344,10 @@ header .song--panel::before{
     position: absolute;
     width: 100%;
     height: 230px;
-    filter: opacity(0.3);
+    filter: opacity(0.2);
     filter: brightness(1,1);
     mix-blend-mode: screen;
-    background: url("../imagen/deiVfoto");
+    background: url("../../imagen/Myketowers.jpeg");
     background-position: right;
     background-repeat: no-repeat;
     top: 40px;
@@ -655,5 +655,3 @@ header .song--panel .Popular__songs .Artists img:hover{
     box-shadow: 2px 2px 10px #fff;
     outline-color: #9383EC;
 }
-
-
