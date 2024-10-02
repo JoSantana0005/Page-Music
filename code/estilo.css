@@ -117,7 +117,7 @@ header .menu--panel .menu--songs li:hover{
     background-color: #406486 ;
 }
 header .menu--panel .menu--songs li span{
-    font-size: 15px;
+    font-size: 14px;
     font-weight: 400;
     color: #888;
 }
@@ -129,7 +129,7 @@ header .menu--panel .menu--songs li img{
 }
 header .menu--panel .menu--songs li h5{
     font-size: 12px;
-    margin-left: 10px;
+    margin-left: 15px;
     color: #fff;
     font-weight: 300;
     letter-spacing: 1px;
@@ -220,6 +220,7 @@ header .Play--music h5 .subtitle{
 }
 header .Play--music .icon--play{
     margin-top: 10px;
+    margin-left: 15px;
     display: flex;
     width: 150px;
     align-items: center;

@@ -316,3 +316,21 @@ left__scrolls.addEventListener('click',()=>{
 right__scrolls.addEventListener('click',()=>{
   popular__singer.scrollLeft += 330
 })
+//Evento para cambiar la musica , ponerla en aletaorio , etc..
+let shuffle = document.getElementById('Music-Change');
+shuffle.addEventListener('click',()=>{
+  let referencia = shuffle.innerHTML
+  switch (referencia) {
+    case 'next':
+      shuffle.classList.add('bi bi-repeat');
+      shuffle.classList.remove('bi bi-repeat-1');
+      shuffle.classList.remove('bi bi-shuffle');
+      referencia.innerHTML = 'repeat'
+      break;
+  
+    case 'repeat':
+      shuffle.classList.remove('bi bi-repeat');
+      shuffle.classList.add('bi bi-repeat-1');
+      shuffle.classList.remove('bi bi-shuffle');
+  }
+})
