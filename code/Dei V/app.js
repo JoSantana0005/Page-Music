@@ -95,14 +95,14 @@ const songs = [
   play.addEventListener('click',() =>{
     if(music.paused || music.currentTime <= 0){
       music.play()
-      play.classList.remove('bi-play-fill');
-      play.classList.add('bi-pause-fill');
+      play.classList.add('bi-play-fill');
+      play.classList.remove('bi-pause-fill');
       wave.classList.add('active');
     }else{
       music.pause()
       play.classList.remove('bi-pause-fill');
       play.classList.add('bi-play-fill');
-      wave.classList.remove('active');
+      wave.classList.add('active');
     }
   })
   //Event para pausar y reproducir las canciones de la playlist
@@ -125,8 +125,8 @@ const songs = [
       index = e.target.id
       console.log(index)
       makeplay();
-      e.target.classList.add('bi-play-circle-fill');
-      e.target.classList.remove('bi-pause-circle-fill');
+      e.target.classList.remove('bi-play-circle-fill');
+      e.target.classList.add('bi-pause-circle-fill');
       music.src = `../../audio/${index}.mp3`
       poster.src = `../../imagen/${index}.jpeg`
       let song__title = songs.filter((ele) =>{
@@ -138,9 +138,13 @@ const songs = [
         Title.style = 'color: #aaa; font-size: 11px'
         Title.innerHTML = content
       })
-      play.classList.remove('bi-play-fill');
-      play.classList.add('bi-pause-fill');
-      wave.classList.add('active');
+      if (music.play()) {
+        play.classList.remove('bi-play-fill');
+        play.classList.add('bi-pause-fill');
+      } else {
+        play.classList.add('bi-play-fill');
+        play.classList.remove('bi-pause-fill');
+      }
       music.addEventListener('ended',() =>{
         play.classList.remove('bi-pause-fill');
         play.classList.add('bi-play-fill');
@@ -187,11 +191,6 @@ music.addEventListener('timeupdate', () =>{
 // event para el seek 
 seek.addEventListener('change', () =>{
      music.currentTime = (seek.value * music.duration)/100 
-})
-music.addEventListener('ended', () =>{
-  play.classList.add('bi-pause-fill');
-  play.classList.remove('bi-play-fill');
-  wave.classList.remove('active');
 })
 
 // event para el volumen de la musica
@@ -245,8 +244,15 @@ left.addEventListener('click', () =>{
        })
        makeplay()
  
-       document.getElementById(`${index}`).classList.add('bi-play-fill');
-       document.getElementById(`${index}`).classList.remove('bi-pause-fill');
+       document.getElementById(`${index}`).classList.remove('bi-play-circle-fill');
+       document.getElementById(`${index}`).classList.add('bi-pause-circle-fill');
+       if (music.play()) {
+        play.classList.remove('bi-play-fill');
+        play.classList.add('bi-pause-fill');
+      } else {
+        play.classList.add('bi-play-fill');
+        play.classList.remove('bi-pause-fill');
+      }
  
        makebackground()
        Array.from(document.getElementsByClassName('SongMusic'))[`${index-1}`].style.background = "#000"
@@ -271,8 +277,15 @@ right.addEventListener('click', () =>{
     })
     makeplay()
 
-    document.getElementById(`${index}`).classList.add('bi-play-fill');
-    document.getElementById(`${index}`).classList.remove('bi-pause-fill');
+    document.getElementById(`${index}`).classList.remove('bi-play-circle-fill');
+    document.getElementById(`${index}`).classList.add('bi-pause-circle-fill');
+    if (music.play()) {
+      play.classList.remove('bi-play-fill');
+      play.classList.add('bi-pause-fill');
+    } else {
+      play.classList.add('bi-play-fill');
+      play.classList.remove('bi-pause-fill');
+    }
 
     makebackground()
     Array.from(document.getElementsByClassName('SongMusic'))[`${index-1}`].style.background = "#000"
