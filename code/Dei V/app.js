@@ -95,13 +95,13 @@ const songs = [
   play.addEventListener('click',() =>{
     if(music.paused || music.currentTime <= 0){
       music.play()
-      play.classList.add('bi-play-fill');
-      play.classList.remove('bi-pause-fill');
+      play.classList.remove('bi-play-fill');
+      play.classList.add('bi-pause-fill');
       wave.classList.add('active');
     }else{
       music.pause()
-      play.classList.remove('bi-pause-fill');
-      play.classList.add('bi-play-fill');
+      play.classList.add('bi-pause-fill');
+      play.classList.remove('bi-play-fill');
       wave.classList.remove('active');
     }
   })
@@ -366,15 +366,6 @@ music.addEventListener('ended',()=>{
       Title.style = 'color: #aaa; font-size: 11px'
       Title.innerHTML = content
     })
-    if (music.play()) {
-      play.classList.remove('bi-play-fill');
-      play.classList.add('bi-pause-fill');
-      wave.classList.add('active');
-    } else {
-      play.classList.add('bi-play-fill');
-      play.classList.remove('bi-pause-fill');
-      wave.classList.remove('active');
-    }
     makebackground()
     Array.from(document.getElementsByClassName('SongMusic'))[`${index-1}`].style.background = "#000"
     music.play()
@@ -395,15 +386,6 @@ music.addEventListener('ended',()=>{
       Title.style = 'color: #aaa; font-size: 11px'
       Title.innerHTML = content
     })
-    if (music.play()) {
-      play.classList.remove('bi-play-fill');
-      play.classList.add('bi-pause-fill');
-      wave.classList.add('active');
-    } else {
-      play.classList.add('bi-play-fill');
-      play.classList.remove('bi-pause-fill');
-      wave.classList.remove('active');
-    }
     makebackground()
     Array.from(document.getElementsByClassName('SongMusic'))[`${aleatorio-1}`].style.background = "#000"
     music.play()
@@ -421,15 +403,6 @@ music.addEventListener('ended',()=>{
       Title.style = 'color: #aaa; font-size: 11px'
       Title.innerHTML = content
     })
-    if (music.play()) {
-      play.classList.remove('bi-play-fill');
-      play.classList.add('bi-pause-fill');
-      wave.classList.add('active');
-    } else {
-      play.classList.add('bi-play-fill');
-      play.classList.remove('bi-pause-fill');
-      wave.classList.remove('active');
-    }
     makebackground()
     Array.from(document.getElementsByClassName('SongMusic'))[`${index-1}`].style.background = "#000"
     music.play()
