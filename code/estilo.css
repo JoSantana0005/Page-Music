@@ -219,7 +219,7 @@ header .Play--music h5 .subtitle{
     text-wrap: wrap;
 }
 header .Play--music .icon--play{
-    margin-top: 10px;
+    
     margin-left: 15px;
     display: flex;
     width: 150px;
