@@ -24,7 +24,7 @@ header{
 }
 header .menu--panel,.song--panel{
     position: relative;
-    width: 25%;
+    width: 30%;
     height: 90%;
     border-radius: 10px;
     background-color: #254466;
@@ -32,7 +32,7 @@ header .menu--panel,.song--panel{
     box-shadow: 2px 1px 15px #000009;
 }
 header .song--panel{
-    width: 75%;
+    width: 70%;
     background-color:  #070B66 ;
 }
 header .Play--music{
@@ -101,13 +101,14 @@ header .menu--panel .Playlist .Activo--boostrap .bi{
 }
 header .menu--panel .menu--songs{
     margin-top: 45px;
-    border-radius: px;
+    
 }
 header .menu--panel .menu--songs li{
     padding: 5px 0 5px 20px;
     list-style: none;
     display: flex;
     cursor: pointer;
+    gap: 15px;
     align-items: center;
     margin-bottom: 15px;
     transition: .3s linear;
@@ -116,18 +117,18 @@ header .menu--panel .menu--songs li:hover{
     background-color: #406486 ;
 }
 header .menu--panel .menu--songs li span{
-    font-size: 10px;
+    font-size: 15px;
     font-weight: 400;
     color: #888;
 }
 header .menu--panel .menu--songs li img{
-    width: 32px;
-    height: 32px;
+    width: 30px;
+    height: 30px;
     filter: drop-shadow(2px 1px 15px #555);
     margin-left: 10px;
 }
 header .menu--panel .menu--songs li h5{
-    font-size: 11px;
+    font-size: 12px;
     margin-left: 10px;
     color: #fff;
     font-weight: 300;
@@ -139,7 +140,7 @@ header .menu--panel .menu--songs li h5 .subTitle{
     color: #777;
 }
 header .menu--panel .menu--songs li .bi{
-    font-size: 15px;
+    font-size: 16px;
     color: #fdfdfd;
     position: absolute;
     cursor: pointer;
@@ -218,12 +219,15 @@ header .Play--music h5 .subtitle{
     text-wrap: wrap;
 }
 header .Play--music .icon--play{
-    margin-left: 10px;
-    padding: 0;
+    margin-top: 10px;
+    display: flex;
+    width: 150px;
+    align-items: center;
+    border: 1px solid #000;
 }
 header .Play--music .icon--play .bi{
-    margin: 0 2px;
     font-size: 18px;
+    margin: 1px 8px;
     color: #00000f;
     cursor: pointer;
     transition: .4s linear;
