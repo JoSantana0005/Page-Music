@@ -323,23 +323,115 @@ shuffle.addEventListener('click',()=>{
   let referencia = cambio
   switch (referencia) {
     case 'next':
-      shuffle.classList.add('bi-repeat');
-      shuffle.classList.remove('bi-repeat-1');
+      shuffle.classList.remove('bi-repeat')
+      shuffle.classList.add('bi-repeat-1');
       shuffle.classList.remove('bi-shuffle');
       cambio = 'repeat'
       break;
   
     case 'repeat':
-      shuffle.classList.remove('bi-repeat');
-      shuffle.classList.add('bi-repeat-1');
-      shuffle.classList.remove('bi-shuffle');
+      shuffle.classList.remove('bi-repeat')
+      shuffle.classList.remove('bi-repeat-1');
+      shuffle.classList.add('bi-shuffle');
       cambio= 'repeat-1'
       break;
     case 'repeat-1':
-      shuffle.classList.remove('bi-repeat');
       shuffle.classList.remove('bi-repeat-1');
-      shuffle.classList.add('bi-shuffle');
+      shuffle.classList.remove('bi-shuffle');
+      shuffle.classList.add('bi-repeat')
       cambio = 'next'
       break;
+  }
+})
+//Evento como tal
+let cantidad = document.getElementsByClassName('SongMusic').length;
+music.addEventListener('ended',()=>{
+  if(shuffle.classList.contains('bi-repeat')){
+    if(index == songs.length){
+      index == 1
+    }else{
+      index++;
+    }
+    console.log(index)
+    makeplay();
+    music.src = `../../audio/${index}.mp3`
+    poster.src = `../../imagen/${index}.jpeg`
+    document.getElementById(`${index}`).classList.remove('bi-play-circle-fill');
+    document.getElementById(`${index}`).classList.add('bi-pause-circle-fill');
+    let song__title = songs.filter((ele) =>{
+      return ele.id == index
+    })
+    song__title.forEach(ele =>{
+      let {content} = ele
+      Title.style = 'color: #aaa; font-size: 11px'
+      Title.innerHTML = content
+    })
+    if (music.play()) {
+      play.classList.remove('bi-play-fill');
+      play.classList.add('bi-pause-fill');
+      wave.classList.add('active');
+    } else {
+      play.classList.add('bi-play-fill');
+      play.classList.remove('bi-pause-fill');
+      wave.classList.remove('active');
+    }
+    makebackground()
+    Array.from(document.getElementsByClassName('SongMusic'))[`${index-1}`].style.background = "#000"
+    music.play()
+    
+  }else if(shuffle.classList.contains('bi-shuffle')){
+    let aleatorio = Math.floor(Math.random() * cantidad)
+    console.log(aleatorio)
+    makeplay();
+    music.src = `../../audio/${aleatorio}.mp3`
+    poster.src = `../../imagen/${aleatorio}.jpeg`
+    document.getElementById(`${aleatorio}`).classList.remove('bi-play-circle-fill');
+    document.getElementById(`${aleatorio}`).classList.add('bi-pause-circle-fill');
+    let song__title = songs.filter((ele) =>{
+      return ele.id == aleatorio
+    })
+    song__title.forEach(ele =>{
+      let {content} = ele
+      Title.style = 'color: #aaa; font-size: 11px'
+      Title.innerHTML = content
+    })
+    if (music.play()) {
+      play.classList.remove('bi-play-fill');
+      play.classList.add('bi-pause-fill');
+      wave.classList.add('active');
+    } else {
+      play.classList.add('bi-play-fill');
+      play.classList.remove('bi-pause-fill');
+      wave.classList.remove('active');
+    }
+    makebackground()
+    Array.from(document.getElementsByClassName('SongMusic'))[`${aleatorio-1}`].style.background = "#000"
+    music.play()
+  }else{
+    makeplay();
+    music.src = `../../audio/${index}.mp3`
+    poster.src = `../../imagen/${index}.jpeg`
+    document.getElementById(`${index}`).classList.remove('bi-play-circle-fill');
+    document.getElementById(`${index}`).classList.add('bi-pause-circle-fill');
+    let song__title = songs.filter((ele) =>{
+      return ele.id == index
+    })
+    song__title.forEach(ele =>{
+      let {content} = ele
+      Title.style = 'color: #aaa; font-size: 11px'
+      Title.innerHTML = content
+    })
+    if (music.play()) {
+      play.classList.remove('bi-play-fill');
+      play.classList.add('bi-pause-fill');
+      wave.classList.add('active');
+    } else {
+      play.classList.add('bi-play-fill');
+      play.classList.remove('bi-pause-fill');
+      wave.classList.remove('active');
+    }
+    makebackground()
+    Array.from(document.getElementsByClassName('SongMusic'))[`${index-1}`].style.background = "#000"
+    music.play()
   }
 })
