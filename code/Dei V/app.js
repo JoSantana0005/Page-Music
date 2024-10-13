@@ -100,8 +100,8 @@ const songs = [
       wave.classList.add('active');
     }else{
       music.pause()
-      play.classList.add('bi-pause-fill');
-      play.classList.remove('bi-play-fill');
+      play.classList.remove('bi-pause-fill');
+      play.classList.add('bi-play-fill');
       wave.classList.remove('active');
     }
   })
